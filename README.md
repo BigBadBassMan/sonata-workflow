@@ -100,6 +100,9 @@ services:
     Yokai\SonataWorkflow\Controller\WorkflowController:
         autowire: true
         tags: ['controller.service_arguments']
+    workflow.registry.pub:
+        alias: workflow.registry
+        public: true
 
 sonata_admin:
     extensions:
@@ -146,6 +149,9 @@ services:
     Yokai\SonataWorkflow\Controller\WorkflowController:
         autowire: true
         tags: ['controller.service_arguments']
+    workflow.registry.pub:
+        alias: workflow.registry
+        public: true
 
 sonata_admin:
     extensions:
