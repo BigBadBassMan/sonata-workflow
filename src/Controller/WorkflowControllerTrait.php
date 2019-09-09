@@ -158,9 +158,9 @@ trait WorkflowControllerTrait
         if ($registry === null) {
             try {
                 if (method_exists($this, 'get')) {
-                    $registry = $this->get('workflow.registry');
+                    $registry = $this->get('workflow.registry.pub');
                 } else {
-                    $registry = $this->getContainer()->get('workflow.registry');
+                    $registry = $this->getContainer()->get('workflow.registry.pub');
                 }
             } catch (ServiceNotFoundException $exception) {
                 throw new \LogicException('Could not find the "workflow.registry" service. '.
